@@ -65,10 +65,6 @@ export const action = async (ctx) =>{
     const CR = ctx.options.getNumber('暴擊率')
     const CD = ctx.options.getNumber('爆擊傷害')
 
-    if (isNaN(HP) || isNaN(ATK) || isNaN(DEF) || isNaN(atk) || isNaN(hp) || isNaN(def) || isNaN(EM) || isNaN(ER) || isNaN(CR) || isNaN(CD)) {
-        await ctx.reply('小傢伙，要輸入數字喔');
-        return;
-    }
     const score = parseFloat((HP/5.8)+(ATK/5.8)+(DEF/7.3)+(atk/19/3)+(hp/299/3)+(def/23/3)+(EM/23)+(ER/6.5)+(CR/3.9)+(CD/7.8)).toFixed(2)
     if (score==9){
       await ctx.reply(`分數為 ${score}
