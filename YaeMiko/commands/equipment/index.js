@@ -2,56 +2,46 @@ import { SlashCommandBuilder } from "discord.js";
 
 export const command = new SlashCommandBuilder()
  .setName('聖遺物評分')
- .setDescription('想知道這個聖遺物能用嗎?輸入聖遺物數值吧(無效詞條請輸入0)')
+ .setDescription('想知道這個聖遺物能用嗎?輸入聖遺物數值吧(請選擇有效詞條並輸入數值)')
  .addNumberOption(option => 
     option.setName('大生命')
-      .setDescription('單次最大值為5.8%')
-      .setRequired(true))
+      .setDescription('單次最大值為5.8%'))
   
   .addNumberOption(option => 
     option.setName('大攻擊')
-      .setDescription('單次最大值為5.8%')
-      .setRequired(true))
+      .setDescription('單次最大值為5.8%'))
   
   .addNumberOption(option => 
     option.setName('大防禦')
-        .setDescription('單次最大值為7.3%')
-        .setRequired(true))
+        .setDescription('單次最大值為7.3%'))
   
   .addNumberOption(option => 
     option.setName('小攻擊')
-        .setDescription('單次最大值為19')
-        .setRequired(true))
+        .setDescription('單次最大值為19'))
   
   .addNumberOption(option => 
     option.setName('小生命')
-        .setDescription('單次最大值為299')
-        .setRequired(true))
+        .setDescription('單次最大值為299'))
   
   .addNumberOption(option => 
     option.setName('小防禦')
-      .setDescription('單次最大值為23')
-      .setRequired(true))
+      .setDescription('單次最大值為23'))
   
   .addNumberOption(option => 
     option.setName('元素精通')
-      .setDescription('單次最大值23')
-      .setRequired(true))
+      .setDescription('單次最大值23'))
     
   .addNumberOption(option => 
     option.setName('元素充能效率')
-      .setDescription('單次最大值為6.5%')
-      .setRequired(true))
+      .setDescription('單次最大值為6.5%'))
     
   .addNumberOption(option => 
     option.setName('暴擊率')
-      .setDescription('單次最大值為3.9%')
-      .setRequired(true))
+      .setDescription('單次最大值為3.9%'))
 
   .addNumberOption(option => 
     option.setName('爆擊傷害')
-      .setDescription('單次最大值為7.8%')
-      .setRequired(true))
+      .setDescription('單次最大值為7.8%'))
 
 export const action = async (ctx) =>{
     const HP = ctx.options.getNumber('大生命')
